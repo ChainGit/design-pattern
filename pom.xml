@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>design-pattern-learn</name>
+
+    <groupId>com.chain</groupId>
+    <artifactId>design-pattern-learn</artifactId>
+
+    <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>creational-patterns</module>
+        <module>common</module>
+    </modules>
+
+    <properties>
+        <design-pattern-learn.version>0.0.1-SNAPSHOT</design-pattern-learn.version>
+
+        <!--http://maven.apache.org/plugins/-->
+        <plugin-clean.version>3.1.0</plugin-clean.version>
+        <plugin-compiler.version>3.8.0</plugin-compiler.version>
+        <plugin-deploy.version>3.0.0-M1</plugin-deploy.version>
+        <plugin-failsafe.version>2.22.1</plugin-failsafe.version>
+        <plugin-install.version>3.0.0-M1</plugin-install.version>
+        <plugin-resources.version>3.1.0</plugin-resources.version>
+        <plugin-site.version>3.7.1</plugin-site.version>
+        <plugin-surefire.version>2.22.1</plugin-surefire.version>
+        <plugin-verifier.version>1.1</plugin-verifier.version>
+        <plugin-source.version>3.0.1</plugin-source.version>
+
+        <spring.version>4.3.20.RELEASE</spring.version>
+
+        <lombok.version>1.18.4</lombok.version>
+        <junit.version>4.12</junit.version>
+        <fastjson.version>1.2.51</fastjson.version>
+        <aspectjweaver.version>1.9.2</aspectjweaver.version>
+
+        <commons-logging.version>1.2</commons-logging.version>
+        <log4j.version>2.11.1</log4j.version>
+
+        <commons-lang.version>2.6</commons-lang.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
+        <commons-beanutils.version>1.9.3</commons-beanutils.version>
+        <commons-codec.version>1.11</commons-codec.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
+        <commons-collections4.version>4.2</commons-collections4.version>
+        <commons-net.version>3.6</commons-net.version>
+        <commons-io.version>1.3.2</commons-io.version>
+        <commons-configuration.version>1.10</commons-configuration.version>
+        <commons-compress.version>1.18</commons-compress.version>
+        <commons-math3.version>3.6.1</commons-math3.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.chain</groupId>
+                <artifactId>common</artifactId>
+                <version>${design-pattern-learn.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+
+            <!--Compiles Java sources.-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${plugin-compiler.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <!--Build a source-JAR from the current project.-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${plugin-source.version}</version>
+            </plugin>
+
+            <!--Deploy the built artifact to the remote repository.-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${plugin-deploy.version}</version>
+            </plugin>
+
+            <!--Run the JUnit unit tests in an isolated classloader.-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${plugin-surefire.version}</version>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
