@@ -12,6 +12,7 @@ public class StaticInnerClassSingleton extends AbstractSingletonAction {
     }
 
     private StaticInnerClassSingleton() {
+        throw new RuntimeException("constructor is not allowed");
     }
 
     public static StaticInnerClassSingleton getInstance() {
