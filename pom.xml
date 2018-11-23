@@ -17,6 +17,7 @@
     <modules>
         <module>creational-patterns</module>
         <module>common</module>
+        <module>structural-patterns</module>
     </modules>
 
     <properties>
