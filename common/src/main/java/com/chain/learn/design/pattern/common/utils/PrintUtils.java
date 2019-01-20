@@ -14,6 +14,10 @@ public final class PrintUtils {
     private PrintUtils() {
     }
 
+    public static void println(Object arg) {
+        System.out.println(arg);
+    }
+
     public static void println(Object... args) {
         System.out.println(StringUtils.join(args));
     }
